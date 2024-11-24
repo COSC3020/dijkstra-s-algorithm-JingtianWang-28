@@ -23,3 +23,25 @@ inefficient.
 
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+///
+
+In the first for loop, each node needs to be traversed once, including V nodes
+
+In while (visited.size < Object.keys(graph).length), the number of loop runs is proportional to the number of nodes, and each node needs to be marked as visited after processing
+
+for (let node in distances) traverses all nodes and processes unvisited nodes.
+
+The time complexity of each search is O(V), the outer loop is O(V), and the total time complexity of this part is O(V^2)
+
+for (let neighbor in graph[currentNode]) traverses all neighbors of the current node, each edge will be processed at most once, and each edge connecting two nodes will be visited once, including E edges
+
+The total time complexity is O(V^2+E)
+
+###
+Source:those webs and cosc4760 lecture slide help me wtih the math problem and code logic.
+
+https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
+https://www.w3schools.com/dsa/dsa_algo_graphs_dijkstra.php
+
+Plagiarism Statement: “I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice
